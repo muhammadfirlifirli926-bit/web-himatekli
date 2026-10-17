@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HIMATEKLI PILM | Himpunan Mahasiswa Teknik Listrik & Instalasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;color:#fff;background:#040711;--main:#168cff;--second:#00eaff;--glow:rgba(0,170,255,.25);overflow-x:hidden;transition:.5s}body.about{--main:#9b4dff;--second:#ff3cac;--glow:rgba(155,77,255,.25)}body.materi{--main:#ff4b32;--second:#ff9f1c;--glow:rgba(255,70,40,.25)}body.kegiatan{--main:#ffd400;--second:#ff8c00;--glow:rgba(255,190,0,.22)}body.contact{--main:#00d68f;--second:#00e5ff;--glow:rgba(0,220,160,.22)}a{text-decoration:none;color:inherit}button,input{font:inherit}.bg{position:fixed;inset:0;z-index:-5;background:radial-gradient(circle at 15% 20%,var(--glow),transparent 28%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.035),transparent 30%),#040711}.grid-bg{position:fixed;inset:0;z-index:-4;opacity:.12;background-image:linear-gradient(rgba(0,234,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(0,234,255,.12) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.navbar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 6%;background:rgba(4,7,17,.78);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}.logo{display:flex;align-items:center;gap:10px;font:800 15px Orbitron;letter-spacing:1px;position:relative}.logo-mark{position:relative;width:54px;height:54px;display:block;flex:0 0 auto}.logo-image,.logo-wheel{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:contain;filter:drop-shadow(0 0 13px var(--glow));transition:.35s}.logo-wheel{z-index:2;pointer-events:none;opacity:0;mask-image:radial-gradient(circle at center,transparent 0 43%,#000 44% 100%);-webkit-mask-image:radial-gradient(circle at center,transparent 0 43%,#000 44% 100%)}.logo:hover .logo-wheel{opacity:1;animation:wheelSpin 2.2s linear infinite;filter:drop-shadow(0 0 10px #00eaff) drop-shadow(0 0 25px #168cff)}@keyframes wheelSpin{to{transform:rotate(360deg)}}.nav-menu{display:flex;gap:7px}.nav-pill{cursor:pointer;padding:10px 17px;border-radius:999px;color:#aab4c7;font-size:13px;font-weight:700;cursor:pointer;transition:.3s;position:relative;overflow:hidden}.nav-pill{border:1px solid transparent}.nav-pill:hover{color:var(--pill2);transform:translateY(-3px);background:transparent;border-color:var(--pill2);box-shadow:0 0 14px color-mix(in srgb,var(--pill2) 22%,transparent)}.nav-pill.active{color:#fff;transform:translateY(-3px);background:linear-gradient(135deg,var(--pill),var(--pill2));border-color:transparent;box-shadow:0 0 24px color-mix(in srgb,var(--pill) 45%,transparent)}.blue{--pill:#168cff;--pill2:#00eaff}.purple{--pill:#9b4dff;--pill2:#ff3cac}.red{--pill:#ff3b30;--pill2:#ff9f1c}.yellow{--pill:#ffd400;--pill2:#ff8c00}.green{--pill:#00d68f;--pill2:#00e5ff}.nav-right{display:flex;gap:9px;align-items:center}.theme-toggle,.mobile-button{width:46px;height:46px;border-radius:15px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);color:#fff;cursor:pointer;transition:.3s}.theme-toggle:hover{transform:rotate(8deg) translateY(-3px);box-shadow:0 0 20px var(--glow)}.mobile-button{display:none;font-size:21px}
+.page{display:none;min-height:calc(100vh - 84px);padding:75px 7% 90px;animation:in .5s ease}.page.active-page{display:block}@keyframes in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}.home-container{min-height:590px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}.badge,.section-label{display:inline-flex;padding:8px 14px;border-radius:999px;border:1px solid color-mix(in srgb,var(--second) 30%,transparent);background:rgba(255,255,255,.035);color:var(--second);font-size:10px;font-weight:800;letter-spacing:1.5px}.badge{margin-bottom:22px}.home-title{font:800 clamp(45px,6.3vw,88px)/1.02 Orbitron;margin-bottom:23px}.home-title span,.section-title h2 span{background:linear-gradient(90deg,var(--main),var(--second),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}.home-description{max-width:650px;color:#9da8bd;line-height:1.8;margin-bottom:30px}.buttons{display:flex;gap:13px;flex-wrap:wrap}.main-button{padding:14px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:800;transition:.3s}.main-button:hover{transform:translateY(-4px)}.primary{background:linear-gradient(135deg,#168cff,#00d9ff);box-shadow:0 0 30px rgba(0,150,255,.2)}.secondary{background:rgba(255,255,255,.04)}
+/* VISUAL LISTRIK HOME */.electric-area{height:520px;display:flex;align-items:center;justify-content:center;position:relative}.electric-core-wrap{width:420px;height:420px;position:relative;display:flex;align-items:center;justify-content:center}.electric-core-wrap:before,.electric-core-wrap:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(0,234,255,.3)}.electric-core-wrap:before{inset:25px;animation:orbit 9s linear infinite}.electric-core-wrap:after{inset:-5px;border-style:dashed;border-color:rgba(22,140,255,.22);animation:orbit 15s linear infinite reverse}@keyframes orbit{to{transform:rotate(360deg)}}/* ELEKTRON MENGELILINGI LOGO LISTRIK */.electron-orbit{position:absolute;inset:35px;border-radius:50%;border:1px solid rgba(0,234,255,.18);animation:electronOrbit 5s linear infinite}.electron-orbit:nth-of-type(2){inset:70px;transform:rotate(55deg);animation-duration:3.7s;animation-direction:reverse;border-color:rgba(155,77,255,.18)}.electron-orbit:nth-of-type(3){inset:105px;transform:rotate(-35deg);animation-duration:4.4s}.electron{position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:#00eaff;box-shadow:0 0 8px #00eaff,0 0 22px #168cff;transform:translateX(-50%)}.electron-orbit:nth-of-type(2) .electron{background:#ff3cac;box-shadow:0 0 8px #ff3cac,0 0 22px #9b4dff}.electron-orbit:nth-of-type(3) .electron{background:#fff;box-shadow:0 0 8px #fff,0 0 22px #00eaff}@keyframes electronOrbit{to{transform:rotate(360deg)}}
+.electric-halo{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(0,234,255,.22),rgba(22,140,255,.08) 45%,transparent 70%);filter:blur(12px);animation:halo 2.8s ease-in-out infinite}@keyframes halo{50%{transform:scale(1.13);opacity:.7}}.bolt{position:relative;z-index:3;width:145px;height:205px;clip-path:polygon(55% 0,100% 0,68% 37%,91% 37%,27% 100%,42% 54%,10% 54%);background:linear-gradient(150deg,#fff 0%,#00eaff 25%,#168cff 70%,#7c3cff);filter:drop-shadow(0 0 15px #00eaff) drop-shadow(0 0 45px #168cff);animation:boltFloat 2.7s ease-in-out infinite}.bolt:after{content:"";position:absolute;inset:8px;background:#050b1c;clip-path:inherit;opacity:.38}@keyframes boltFloat{50%{transform:translateY(-13px) scale(1.05);filter:drop-shadow(0 0 25px #00eaff) drop-shadow(0 0 65px #168cff)}}.electric-text{position:absolute;bottom:25px;font:800 11px Orbitron;letter-spacing:3px;color:#8fefff;text-shadow:0 0 12px #00eaff}.spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#00eaff;box-shadow:0 0 15px #00eaff}.s1{top:17%;left:20%;animation:spark 1.8s infinite}.s2{top:27%;right:12%;animation:spark 2.3s .3s infinite}.s3{bottom:19%;left:14%;animation:spark 1.6s .7s infinite}.s4{bottom:22%;right:18%;animation:spark 2s .4s infinite}@keyframes spark{50%{transform:scale(2.7);opacity:.25}100%{opacity:1}}
+.section-title{text-align:center;margin-bottom:45px}.section-label{margin-bottom:13px}.section-title h2{font:700 clamp(30px,4vw,54px) Orbitron;margin:10px 0 12px}.section-title p{max-width:680px;margin:auto;color:#8994a9;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}.glass-card,.about-card,.material-card,.activity-card,.contact-card,.social-section{position:relative;overflow:hidden;transition:.4s;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);backdrop-filter:blur(14px)}.glass-card{padding:28px;border-radius:26px}.glass-card:hover,.about-card:hover,.material-card:hover,.activity-card:hover,.contact-card:hover{transform:translateY(-8px);border-color:var(--main);box-shadow:0 0 35px var(--glow)}.card-icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:23px;margin-bottom:18px;background:linear-gradient(135deg,var(--main),var(--second));box-shadow:0 0 23px var(--glow)}.glass-card p,.about-card p,.material-card p,.activity-card p,.contact-card p{color:#8994a9;line-height:1.7;font-size:13px}
+/* ABOUT CLICKABLE */.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.about-card{padding:34px;border-radius:30px;cursor:pointer;background:linear-gradient(135deg,rgba(155,77,255,.12),rgba(255,60,172,.035))}.about-card:after{content:"Klik untuk melihat penjelasan";position:absolute;right:20px;bottom:17px;color:#d47aff;font-size:9px;font-weight:800;letter-spacing:1px;opacity:.75}.about-icon{font-size:36px;color:#d47aff;margin-bottom:17px}.about-card h3{font-size:22px;margin-bottom:10px}.about-card p{max-height:54px;overflow:hidden}.about-card.expanded p{max-height:300px}.about-card.expanded{transform:translateY(-6px);box-shadow:0 0 45px rgba(155,77,255,.22);border-color:#c477ff}.about-card.expanded:after{content:"Klik untuk menutup"}.about-card .more{display:none;margin-top:12px;color:#cdb4ff;line-height:1.7;font-size:13px}.about-card.expanded .more{display:block}
+.search-area{max-width:850px;margin:0 auto 40px}.search-box{display:flex;gap:13px;padding:15px 20px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,80,50,.3);margin-bottom:17px}.search-box input{flex:1;background:none;border:0;outline:0;color:#fff}.semester-buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.semester{padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.1);color:#999;background:rgba(255,255,255,.03);cursor:pointer}.semester.active,.semester:hover{color:#fff;background:linear-gradient(135deg,#ff3b30,#ff9f1c)}.material-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.material-card{padding:28px;border-radius:26px}.material-icon{font-size:33px;color:#ff7430;display:block;margin-bottom:16px}.material-number{position:absolute;right:20px;top:17px;color:rgba(255,255,255,.12);font:800 28px Orbitron}.material-card a{display:inline-block;margin-top:13px;color:#ff8c3a;font-size:12px;font-weight:800}.activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.activity-card{padding:36px;min-height:270px;border-radius:30px;background:linear-gradient(135deg,rgba(255,212,0,.1),rgba(255,120,0,.025))}.activity-card>i{font-size:38px;color:#ffd400;margin-bottom:20px}.activity-card h3{font-size:23px;margin-bottom:12px}.activity-line{width:70px;height:4px;border-radius:99px;margin-top:24px;background:linear-gradient(90deg,#ffd400,#ff8c00)}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.contact-card{text-align:center;padding:32px 20px;border-radius:27px}.contact-card i{font-size:33px;color:#00e5a0;margin-bottom:17px}.contact-card a{display:inline-block;margin-top:12px;color:#00e5a0;font-size:12px;font-weight:800}.social-section{text-align:center;padding:35px;border-radius:30px;margin-top:30px}.social-buttons{display:flex;justify-content:center;gap:12px;margin-top:20px}.social-button{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:rgba(255,255,255,.05);font-size:21px;transition:.3s}.social-button:hover{transform:translateY(-5px);background:linear-gradient(135deg,var(--main),var(--second));box-shadow:0 0 25px var(--glow)}footer{padding:25px 7%;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;color:#667084;font-size:11px}.footer-social{display:flex;gap:9px}.footer-social a{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.04)}
+/* MODAL ABOUT */.modal{position:fixed;inset:0;z-index:300;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.modal.show{display:grid}.modal-box{max-width:650px;width:100%;padding:35px;border-radius:30px;background:linear-gradient(145deg,#10172b,#080d1b);border:1px solid color-mix(in srgb,var(--main) 45%,transparent);box-shadow:0 0 70px var(--glow);animation:modalIn .35s ease;position:relative}.modal-box h2{font:700 28px Orbitron;color:var(--second);margin-bottom:15px}.modal-box p{color:#aab4c7;line-height:1.85}.modal-close{position:absolute;right:18px;top:18px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#fff;cursor:pointer}@keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:none}}
+body.light-mode{color:#111827;background:#f5f8fc}.light-mode .navbar{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(15,23,42,.14);box-shadow:0 6px 24px rgba(15,23,42,.10)}.light-mode .logo{color:#0f172a}.light-mode .logo span{color:#0f172a}.light-mode .nav-pill{color:#1e293b;background:transparent;border:1px solid transparent}.light-mode .nav-pill:hover{background:transparent;color:var(--pill2);border-color:var(--pill2);box-shadow:0 0 14px color-mix(in srgb,var(--pill2) 20%,transparent)}.light-mode .nav-pill.active{color:#fff;background:linear-gradient(135deg,var(--pill),var(--pill2));border-color:transparent}.light-mode .theme-toggle{border-color:rgba(15,23,42,.14);color:#0f172a;background:#fff;box-shadow:0 3px 12px rgba(15,23,42,.08)}.light-mode .mobile-button{border-color:rgba(15,23,42,.14);color:#0f172a;background:#fff}.light-mode .bg{background:radial-gradient(circle at 15% 20%,rgba(0,130,230,.1),transparent 28%),#f5f8fc}.light-mode .navbar{background:rgba(255,255,255,.88);border-color:rgba(15,23,42,.08)}.light-mode .nav-pill{color:#1e293b}.light-mode .nav-pill:hover,.light-mode .nav-pill.active{color:#fff}.light-mode .home-description,.light-mode .section-title p,.light-mode .glass-card p,.light-mode .about-card p,.light-mode .material-card p,.light-mode .activity-card p,.light-mode .contact-card p{color:#64748b}.light-mode .glass-card,.light-mode .about-card,.light-mode .material-card,.light-mode .activity-card,.light-mode .contact-card,.light-mode .social-section{background:rgba(255,255,255,.8);border-color:rgba(15,23,42,.09)}.light-mode .theme-toggle{color:#111827;background:rgba(15,23,42,.04)}.light-mode .search-box{background:#fff}.light-mode .search-box input{color:#111827}.light-mode .modal-box{background:linear-gradient(145deg,#fff,#eef4fb)}.light-mode .modal-box p{color:#475569}.light-mode .grid-bg{opacity:.08}.light-mode .nav-menu{background:rgba(255,255,255,.98);border-color:rgba(15,23,42,.12);box-shadow:0 14px 35px rgba(15,23,42,.12)}.light-mode .mobile-button{display:block;border:1px solid rgba(15,23,42,.16);color:#0f172a;background:#fff;box-shadow:0 3px 12px rgba(15,23,42,.10)}.light-mode .mobile-button:hover{transform:translateY(-2px);box-shadow:0 0 16px rgba(0,170,255,.25)}
+@media(max-width:1000px){.home-container{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.material-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:repeat(2,1fr)}}/* MOBILE NAV DRAWER - DESAIN PANEL SAMPING */
+.mobile-overlay{display:none}
+.mobile-close{display:none}.drawer-brand{display:none}
+@media(max-width:700px){
+  .navbar{padding:10px 5%;height:68px}
+  .logo{gap:8px;font-size:13px}
+  .logo-mark{width:44px;height:44px}
+  .nav-right{gap:7px}
+  .theme-toggle,.mobile-button{width:42px;height:42px;border-radius:13px}
+  .mobile-button{display:grid;place-items:center}
+  .nav-menu{display:flex;position:fixed;z-index:220;top:0;right:0;left:auto;width:min(88vw,390px);height:100dvh;padding:92px 0 24px;flex-direction:column;gap:0;background:rgba(5,28,27,.98);border:0;border-left:1px solid rgba(255,255,255,.13);border-radius:0;box-shadow:-20px 0 55px rgba(0,0,0,.35);transform:translateX(105%);visibility:hidden;transition:transform .48s cubic-bezier(.77,0,.18,1),visibility 0s linear .48s;overflow-y:auto;overflow-x:hidden}
+  .nav-menu.show{display:flex;transform:translateX(0);visibility:visible;transition:transform .48s cubic-bezier(.77,0,.18,1),visibility 0s}
+  .nav-menu:before,.nav-menu:after{display:none}
+  .drawer-brand{display:flex;align-items:center;gap:12px;position:absolute;top:18px;left:22px;right:76px;height:62px}
+  .drawer-brand img{width:50px;height:50px;object-fit:contain;border-radius:50%;filter:drop-shadow(0 0 10px rgba(0,234,255,.22))}
+  .drawer-brand strong{display:block;font:800 15px Orbitron;letter-spacing:.8px;color:#fff;line-height:1.2}
+  .drawer-brand span{display:block;margin-top:6px;font:800 9px Inter;letter-spacing:3px;color:#00eaff}
+
+  .nav-pill{width:100%;padding:19px 28px;border-radius:0;text-align:left;font-size:16px;color:#fff;border:0!important;border-top:1px solid rgba(255,255,255,.10)!important;background:transparent!important;transform:none!important;box-shadow:none!important}
+  .nav-pill:hover{color:#fff!important;background:rgba(0,234,255,.08)!important;border-color:rgba(255,255,255,.10)!important;box-shadow:inset 4px 0 0 var(--pill2)!important}
+  .nav-pill.active{color:#fff!important;background:linear-gradient(90deg,rgba(0,234,255,.20),rgba(0,234,255,.04))!important;border-color:rgba(255,255,255,.10)!important;box-shadow:inset 4px 0 0 var(--pill2)!important}
+  .mobile-close{display:grid;position:fixed;z-index:230;top:18px;right:20px;width:48px;height:48px;place-items:center;border:0;background:transparent;color:#fff;font-size:32px;cursor:pointer;opacity:0;pointer-events:none;transform:scale(.8) rotate(-20deg);transition:.3s}
+  .nav-menu.show~.nav-right .mobile-button{opacity:0;pointer-events:none}
+  .nav-menu.show~.nav-right .mobile-close{opacity:1;pointer-events:auto;transform:scale(1) rotate(0)}
+  .mobile-overlay{display:block;position:fixed;inset:0;z-index:210;background:rgba(0,0,0,.68);opacity:0;visibility:hidden;transition:.35s}
+  .mobile-overlay.show{opacity:1;visibility:visible}
+  .page{padding:48px 5% 64px}
+  .home-container{min-height:auto;gap:15px}
+  .home-title{font-size:clamp(34px,10vw,46px)}
+  .electric-area{height:330px}
+  .electric-core-wrap{transform:scale(.68)}
+  .cards,.about-grid,.material-grid,.activity-grid,.contact-grid{grid-template-columns:1fr}
+  .archive-timeline{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:13px;text-align:center}
+  .modal-box{padding:25px}.modal-box h2{font-size:21px}
+}
+@media(max-width:700px){.logo-image{width:100%;height:100%}.page{padding:48px 5% 64px}}
+
+/* MOBILE DRAWER LIGHT MODE */
+@media(max-width:700px){
+  .light-mode .nav-menu{background:rgba(255,255,255,.985);border-left-color:rgba(15,23,42,.10);box-shadow:-20px 0 55px rgba(15,23,42,.16)}
+  .light-mode .drawer-brand strong{color:#0f172a}
+  .light-mode .drawer-brand span{color:#008ea3}
+  .light-mode .drawer-brand img{filter:drop-shadow(0 0 10px rgba(0,150,190,.18))}
+  .light-mode .nav-pill{color:#1e293b!important;border-top-color:rgba(15,23,42,.08)!important}
+  .light-mode .nav-pill:hover{color:var(--pill2)!important;background:rgba(15,23,42,.035)!important;box-shadow:inset 4px 0 0 var(--pill2)!important}
+  .light-mode .nav-pill.active{color:#fff!important;background:linear-gradient(90deg,var(--pill),var(--pill2))!important;box-shadow:inset 4px 0 0 var(--pill2),0 8px 22px rgba(15,23,42,.08)!important}
+  .light-mode .mobile-close{color:#0f172a}
+  .light-mode .mobile-overlay{background:rgba(15,23,42,.30)}
+}
+
+/* LIGHT MODE NAVBAR PC & MOBILE */
+.light-mode .nav-pill{color:#1e293b!important;background:transparent!important;border:1px solid transparent!important}
+.light-mode .nav-pill:hover{color:var(--pill2)!important;background:transparent!important;border-color:var(--pill2)!important;box-shadow:0 0 14px color-mix(in srgb,var(--pill2) 20%,transparent)!important}
+.light-mode .nav-pill.active{color:#fff!important;background:linear-gradient(135deg,var(--pill),var(--pill2))!important;border-color:transparent!important}
+@media (min-width:701px){.mobile-button{display:none!important}.nav-menu{display:flex!important}}
+
+
+/* MOBILE DRAWER STATE: saat menu terbuka, logo navbar utama disembunyikan */
+@media(max-width:700px){
+  body.menu-open .navbar > .logo{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(-12px);transition:opacity .25s ease,transform .25s ease,visibility .25s ease}
+  .navbar > .logo{transition:opacity .25s ease,transform .25s ease,visibility .25s ease}
+  body.menu-open .nav-menu{z-index:240}
+  body.menu-open .mobile-overlay{z-index:230}
+  body.menu-open .mobile-close{z-index:260}
+  .drawer-brand{z-index:2}
+  .nav-menu .nav-pill{position:relative;z-index:3;pointer-events:auto}
+}
+
+/* ARSIP KEPENGURUSAN */
+.archive-intro{max-width:760px;margin:0 auto 42px;text-align:center;color:#8994a9;line-height:1.8}
+.archive-timeline{position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.archive-timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,var(--main),#9b4dff,var(--second),transparent);opacity:.35;transform:translateX(-50%);pointer-events:none}
+.archive-card{--archive:#00eaff;position:relative;z-index:1;min-height:190px;padding:27px;border-radius:26px;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,.10);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));backdrop-filter:blur(15px);transition:transform .35s,border-color .35s,box-shadow .35s,background .35s}
+.archive-card:before{content:"";position:absolute;inset:-2px;background:conic-gradient(from 180deg,transparent 0deg,var(--archive) 80deg,transparent 145deg,transparent 360deg);opacity:0;transition:.45s;filter:blur(10px);z-index:-1}
+.archive-card:after{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--archive),transparent);transform:scaleX(.25);opacity:.55;transition:.35s}
+.archive-card:hover{transform:translateY(-9px) scale(1.015);border-color:var(--archive);box-shadow:0 0 28px color-mix(in srgb,var(--archive) 24%,transparent),inset 0 0 25px color-mix(in srgb,var(--archive) 5%,transparent)}
+.archive-card:hover:before{opacity:.12;animation:archiveGlow 2s linear infinite}
+.archive-card:hover:after{transform:scaleX(1);opacity:1}
+.archive-card.clicked{transform:translateY(-5px);border-color:var(--archive);background:linear-gradient(145deg,color-mix(in srgb,var(--archive) 12%,transparent),rgba(255,255,255,.045));box-shadow:0 0 42px color-mix(in srgb,var(--archive) 30%,transparent),inset 0 0 30px color-mix(in srgb,var(--archive) 7%,transparent)}
+.archive-card.clicked:before{opacity:.18;animation:archiveGlow 2s linear infinite}
+@keyframes archiveGlow{to{transform:rotate(360deg)}}
+.archive-year{font:800 11px Orbitron;letter-spacing:2px;color:var(--archive);margin-bottom:11px}
+.archive-card h3{font:800 21px Orbitron;margin:0 0 9px}.archive-card p{font-size:13px;color:#8994a9;line-height:1.65;margin:0 0 17px}
+.archive-status{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:1px;color:#b8c3d6;padding:7px 10px;border:1px solid color-mix(in srgb,var(--archive) 35%,transparent);border-radius:999px;background:color-mix(in srgb,var(--archive) 7%,transparent)}
+.archive-status i{font-size:8px;color:var(--archive)}
+.archive-details{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s,opacity .35s,margin .35s}.archive-card.clicked .archive-details{max-height:90px;opacity:1;margin-top:15px}.archive-details a{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:12px;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--archive),#168cff);font-size:11px;font-weight:800;box-shadow:0 0 18px color-mix(in srgb,var(--archive) 25%,transparent)}
+.light-mode .archive-card{background:rgba(255,255,255,.82);border-color:rgba(15,23,42,.10)}.light-mode .archive-card p{color:#64748b}.light-mode .archive-status{color:#334155}
+@media(max-width:1000px){.archive-timeline{grid-template-columns:repeat(2,1fr)}.archive-timeline:before{display:none}}
+
+.mobile-button{position:relative;overflow:hidden}.mobile-button i{transition:transform .35s ease}.nav-menu.show + .nav-right .mobile-button i{transform:rotate(90deg)}
+@media(max-width:700px){
+  .navbar{padding:9px 4%;min-height:64px}
+  .logo-mark{width:40px;height:40px}
+  .logo{font-size:12px;gap:7px}
+  .nav-right{gap:6px}
+  .theme-toggle,.mobile-button{width:40px;height:40px;border-radius:12px}
+  .mobile-button{display:grid}
+  .page{padding:42px 4% 58px}
+  .home-container{gap:18px;min-height:0}
+  .home-title{font-size:clamp(31px,10vw,43px);margin-bottom:16px}
+  .home-description{font-size:13px;line-height:1.65;margin-bottom:20px}
+  .badge{font-size:8px;padding:6px 10px;margin-bottom:15px}
+  .main-button{padding:11px 16px;font-size:11px}
+  .electric-area{height:300px}
+  .electric-core-wrap{transform:scale(.58)}
+  .section-title{margin-bottom:30px}
+  .section-title h2{font-size:30px}
+  .section-title p,.archive-intro{font-size:12px}
+  .archive-timeline{grid-template-columns:1fr;gap:14px}
+  .archive-card{min-height:145px;padding:20px;border-radius:21px}
+  .archive-card h3{font-size:18px}
+  .archive-card p{font-size:12px;line-height:1.55}
+  .archive-status{font-size:9px;padding:6px 8px}
+  .archive-details a{padding:8px 11px;font-size:10px}
+  footer{padding:20px 4%;font-size:10px}
+}
+@media(max-width:420px){
+  .nav-menu{width:min(88vw,360px)}
+  .nav-menu:before{left:23px;font-size:13px}
+  .nav-menu:after{left:23px}
+  .nav-pill{padding:17px 23px;font-size:15px}
+  .mobile-close{right:14px;top:13px}
+  .logo-mark{width:38px;height:38px}
+  .logo{font-size:11px}
+}
+@keyframes menuSplit{from{opacity:0;clip-path:inset(0 0 0 100%);transform:translateX(18px)}50%{opacity:1;clip-path:inset(0 0 0 0);transform:translateX(0)}to{opacity:1;clip-path:inset(0);transform:none}}
+</style>
+
+<style id="mobile-drawer-final-fix">
+@media (max-width:700px){
+  .navbar{position:sticky;top:0;z-index:3000}
+  .nav-menu{z-index:3200 !important;pointer-events:none}
+  .nav-menu.show{pointer-events:auto !important}
+  .mobile-overlay{z-index:2900 !important;pointer-events:none}
+  .mobile-overlay.show{pointer-events:auto !important}
+  .mobile-close{z-index:3400 !important}
+  .drawer-brand,.nav-menu .nav-pill{pointer-events:auto !important}
+  body.menu-open .logo{opacity:0;visibility:hidden;pointer-events:none}
+  .nav-menu{background:#071a19 !important}
+  .light-mode .nav-menu{background:#ffffff !important;color:#0f172a !important}
+  .light-mode .drawer-brand strong{color:#0f172a !important}
+  .light-mode .drawer-brand span{color:#008ea3 !important}
+  .light-mode .nav-menu .nav-pill{color:#1e293b !important;background:transparent !important;border-top:1px solid rgba(15,23,42,.10) !important}
+  .light-mode .nav-menu .nav-pill:hover{color:var(--pill2) !important;background:rgba(15,23,42,.035) !important}
+  .light-mode .nav-menu .nav-pill.active{color:#fff !important;background:linear-gradient(90deg,var(--pill),var(--pill2)) !important}
+  body.menu-open .mobile-overlay{opacity:1;visibility:visible}
+}
+@media (min-width:701px){
+  .mobile-button,.mobile-close{display:none !important}
+  .nav-menu{position:static !important;transform:none !important;visibility:visible !important;pointer-events:auto !important}
+}
+</style>
+
+<style id="mobile-click-layer-fix">
+@media (max-width:700px){
+  .navbar{z-index:3000 !important;}
+  .nav-menu{z-index:3200 !important;position:fixed !important;pointer-events:none !important;}
+  .nav-menu.show{pointer-events:auto !important;}
+  .mobile-overlay{z-index:2900 !important;pointer-events:none !important;}
+  .mobile-overlay.show{pointer-events:auto !important;}
+  .mobile-close{z-index:3400 !important;pointer-events:auto !important;}
+  .drawer-brand,.nav-menu .nav-pill{position:relative;z-index:1;pointer-events:auto !important;}
+}
+</style>
+
+<!-- GAYA LOADING SCREEN: RODA / CINCIN LISTRIK BERPUTAR MENGIKUTI GAYA LOGO UTAMA -->
+<style id="himatekli-logo-only-loading">
+.loading-screen{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#040711;
+  opacity:1;
+  visibility:visible;
+  transition:opacity .45s ease, visibility .45s ease;
+}
+.loading-screen.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+.loading-logo-mark{
+  position:relative;
+  width:130px;
+  height:130px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.loading-logo-image, .loading-logo-wheel{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:contain;
+}
+.loading-logo-image{
+  filter:drop-shadow(0 0 18px rgba(0,234,255,.5));
+}
+.loading-logo-wheel{
+  z-index:2;
+  pointer-events:none;
+  /* Menggunakan masker yang sama persis seperti roda logo navbar */
+  mask-image:radial-gradient(circle at center,transparent 0 43%,#000 44% 100%);
+  -webkit-mask-image:radial-gradient(circle at center,transparent 0 43%,#000 44% 100%);
+  animation:wheelSpinLoading 2s linear infinite;
+  filter:drop-shadow(0 0 12px #00eaff) drop-shadow(0 0 28px #168cff);
+}
+@keyframes wheelSpinLoading{
+  to{transform:rotate(360deg)}
+}
+.light-mode .loading-screen{background:#f5f8fc}
+body.loading-active{overflow:hidden}
+</style>
+
+</head>
+<body class="home">
+<div id="loadingScreen" class="loading-screen" aria-label="Memuat website">
+  <div class="loading-logo-mark">
+    <!-- Gambar logo utama diam di tengah -->
+    <img class="loading-logo-image" alt="Logo HIMATEKLI" src="https://www.bing.com/th/id/OIP.qPssQZzTQdGPem03nleOWgAAAA?w=193&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2">
+    <!-- Roda/bingkai luar logo yang berputar persis seperti saat hover logo navbar -->
+    <img class="loading-logo-wheel" alt="" aria-hidden="true" src="https://www.bing.com/th/id/OIP.qPssQZzTQdGPem03nleOWgAAAA?w=193&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2">
+  </div>
+</div>
+
+<div class="bg"></div><div class="grid-bg"></div>
+<nav class="navbar"><a href="#" class="logo" onclick="showPage('home');return false"><span class="logo-mark"><img class="logo-image" alt="Logo HIMATEKLI" src="https://www.bing.com/th/id/OIP.qPssQZzTQdGPem03nleOWgAAAA?w=193&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"><img class="logo-wheel" alt="" aria-hidden="true" src="https://www.bing.com/th/id/OIP.qPssQZzTQdGPem03nleOWgAAAA?w=193&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"></span><span>HIMATEKLI <small>PILM</small></span></a><div class="nav-menu" id="navMenu"><div class="drawer-brand"><img src="https://www.bing.com/th/id/OIP.qPssQZzTQdGPem03nleOWgAAAA?w=193&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2" alt="Logo HIMATEKLI"><div><strong>HIMATEKLI PILM</strong><span>MENU</span></div></div><a class="nav-pill blue active" data-page="home" onclick="showPage('home');return false">Home</a><a class="nav-pill purple" data-page="about" onclick="showPage('about');return false">About Us</a><a class="nav-pill red" data-page="materi" onclick="showPage('materi');return false">Materi</a><a class="nav-pill yellow" data-page="kegiatan" onclick="showPage('kegiatan');return false">Kegiatan</a><a class="nav-pill purple" data-page="arsip" onclick="showPage('arsip');return false">Arsip Kepengurusan</a><a class="nav-pill green" data-page="contact" onclick="showPage('contact');return false">Contact</a></div><div class="nav-right"><button class="theme-toggle" id="themeToggle" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i></button><button class="mobile-button" onclick="toggleMenu()" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button><button class="mobile-close" onclick="toggleMenu()" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button></div></nav><div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+<main>
+<section id="home" class="page active-page"><div class="home-container"><div><div class="badge">⚡ ELECTRICAL STUDENT COMMUNITY</div><h1 class="home-title">Welcome to <span>HIMATEKLI PILM</span></h1><p class="home-description">Wadah mahasiswa Teknik Listrik dan Instalasi untuk belajar, berkolaborasi, mengembangkan kreativitas, dan menciptakan inovasi di bidang kelistrikan dan teknologi.</p><div class="buttons"><a class="main-button primary" onclick="showPage('materi');return false" href="#"><i class="fa-solid fa-book"></i> Jelajahi Materi</a><a class="main-button secondary" onclick="showPage('about');return false" href="#">Tentang HIMATEKLI <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="electric-area"><div class="electric-core-wrap"><div class="electric-halo"></div><div class="electron-orbit"><i class="electron"></i></div><div class="electron-orbit"><i class="electron"></i></div><div class="electron-orbit"><i class="electron"></i></div><div class="bolt"></div><div class="electric-text">POWER • INNOVATION • TECHNOLOGY</div><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i><i class="spark s4"></i></div></div></div><div class="section-title"><div class="section-label">OUR VALUES</div><h2>HIMATEKLI <span>PILM</span></h2><p>Bersama membangun generasi mahasiswa teknik yang kompeten, kreatif dan inovatif.</p></div><div class="cards"><div class="glass-card"><div class="card-icon"><i class="fa-solid fa-bolt"></i></div><h3>Electrical</h3><p>Mengenal dan memahami dunia kelistrikan serta instalasi.</p></div><div class="glass-card"><div class="card-icon"><i class="fa-solid fa-brain"></i></div><h3>Knowledge</h3><p>Tempat berbagi ilmu dan materi perkuliahan.</p></div><div class="glass-card"><div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div><h3>Innovation</h3><p>Mendorong mahasiswa menciptakan inovasi teknologi.</p></div><div class="glass-card"><div class="card-icon"><i class="fa-solid fa-people-group"></i></div><h3>Collaboration</h3><p>Membangun solidaritas dan kerja sama antar mahasiswa.</p></div></div></section>
+<section id="about" class="page"><div class="section-title"><div class="section-label">WHO WE ARE</div><h2>About <span>HIMATEKLI</span></h2><p>Klik salah satu bagian di bawah untuk membaca penjelasan lengkapnya.</p></div><div class="about-grid"><div class="about-card" onclick="openAbout('Siapa Kami?','HIMATEKLI merupakan wadah mahasiswa Teknik Listrik dan Instalasi untuk mengembangkan kemampuan akademik, organisasi, kepemimpinan, kreativitas, dan keterampilan praktis. Organisasi ini menjadi ruang untuk saling belajar, berbagi pengalaman, serta membangun jejaring antar mahasiswa.')"><div class="about-icon"><i class="fa-solid fa-users"></i></div><h3>Siapa Kami?</h3><p>HIMATEKLI merupakan wadah mahasiswa Teknik Listrik dan Instalasi.</p><div class="more">Kami mendorong mahasiswa agar aktif dalam kegiatan akademik dan organisasi serta mampu mengembangkan potensi diri.</div></div><div class="about-card" onclick="openAbout('Visi','Mewujudkan mahasiswa Teknik Listrik dan Instalasi yang aktif, inovatif, berintegritas, kompeten, dan mampu menghadapi perkembangan teknologi serta kebutuhan dunia kerja.')"><div class="about-icon"><i class="fa-solid fa-bullseye"></i></div><h3>Visi</h3><p>Mewujudkan mahasiswa yang aktif, inovatif dan berintegritas.</p><div class="more">Visi ini menjadi arah bersama dalam menjalankan program dan kegiatan HIMATEKLI.</div></div><div class="about-card" onclick="openAbout('Misi','Membangun lingkungan organisasi yang mendukung pengembangan ilmu, kreativitas, kepemimpinan, keterampilan teknis, komunikasi, dan kolaborasi mahasiswa melalui kegiatan yang bermanfaat.')"><div class="about-icon"><i class="fa-solid fa-rocket"></i></div><h3>Misi</h3><p>Membangun lingkungan organisasi yang mendukung pengembangan ilmu dan kreativitas.</p><div class="more">Misi diwujudkan melalui seminar, workshop, proyek teknologi, diskusi, dan kegiatan pengembangan mahasiswa.</div></div><div class="about-card" onclick="openAbout('Collaboration','HIMATEKLI membangun kolaborasi antar mahasiswa, dosen, organisasi, komunitas, dan pihak lain untuk membuka kesempatan belajar, berkarya, dan mengembangkan proyek teknologi bersama.')"><div class="about-icon"><i class="fa-solid fa-handshake"></i></div><h3>Collaboration</h3><p>Menghubungkan mahasiswa melalui kegiatan akademik, teknologi dan organisasi.</p><div class="more">Kolaborasi membantu memperluas pengalaman, jaringan, dan kesempatan bagi mahasiswa untuk menghasilkan karya.</div></div></div></section>
+<section id="materi" class="page"><div class="section-title"><div class="section-label">ACADEMIC HUB</div><h2>Cari <span>Materi Kuliah</span></h2><p>Temukan materi perkuliahan Teknik Listrik dengan cepat.</p></div><div class="search-area"><div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" placeholder="Cari materi..." oninput="filterMaterials()"></div><div class="semester-buttons"><button class="semester active" onclick="filterSemester('all',this)">Semua</button><button class="semester" onclick="filterSemester('1',this)">Semester 1</button><button class="semester" onclick="filterSemester('2',this)">Semester 2</button><button class="semester" onclick="filterSemester('3',this)">Semester 3</button><button class="semester" onclick="filterSemester('4',this)">Semester 4</button><button class="semester" onclick="filterSemester('5',this)">Semester 5</button></div></div><div class="material-grid"><div class="material-card" data-semester="1"><div class="material-number">01</div><span class="material-icon"><i class="fa-solid fa-square-root-variable"></i></span><h3>Matematika Dasar</h3><p>Konsep dasar matematika untuk mahasiswa teknik.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="1"><div class="material-number">02</div><span class="material-icon"><i class="fa-solid fa-atom"></i></span><h3>Fisika Dasar</h3><p>Konsep dasar fisika yang digunakan dalam teknik.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="2"><div class="material-number">03</div><span class="material-icon"><i class="fa-solid fa-plug"></i></span><h3>Rangkaian Listrik</h3><p>Hukum Ohm, Kirchhoff, rangkaian DC dan AC.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="2"><div class="material-number">04</div><span class="material-icon"><i class="fa-solid fa-microchip"></i></span><h3>Elektronika Dasar</h3><p>Dioda, transistor, resistor dan komponen elektronika.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="3"><div class="material-number">05</div><span class="material-icon"><i class="fa-solid fa-robot"></i></span><h3>Mikrokontroler</h3><p>Arduino, sensor dan sistem embedded.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="4"><div class="material-number">06</div><span class="material-icon"><i class="fa-solid fa-house-signal"></i></span><h3>Instalasi Listrik</h3><p>Instalasi rumah, pengaman dan distribusi listrik.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="4"><div class="material-number">07</div><span class="material-icon"><i class="fa-solid fa-industry"></i></span><h3>Sistem Tenaga</h3><p>Pembangkitan, transmisi dan distribusi tenaga listrik.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="5"><div class="material-number">08</div><span class="material-icon"><i class="fa-solid fa-gears"></i></span><h3>Mesin Listrik</h3><p>Motor listrik, generator dan transformator.</p><a href="#">Buka Materi →</a></div><div class="material-card" data-semester="5"><div class="material-number">09</div><span class="material-icon"><i class="fa-solid fa-wave-square"></i></span><h3>Sistem Kontrol</h3><p>Dasar sistem kontrol, sensor dan automasi.</p><a href="#">Buka Materi →</a></div></div></section>
+<section id="kegiatan" class="page"><div class="section-title"><div class="section-label">OUR ACTIVITIES</div><h2>Kegiatan <span>HIMATEKLI</span></h2><p>Belajar, berorganisasi, berkarya dan berkembang bersama.</p></div><div class="activity-grid"><div class="activity-card"><i class="fa-solid fa-graduation-cap"></i><h3>Seminar</h3><p>Seminar dan sharing session mengenai teknologi, kelistrikan dan dunia kerja.</p><div class="activity-line"></div></div><div class="activity-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Workshop</h3><p>Workshop praktik kelistrikan, elektronika, instalasi dan teknologi.</p><div class="activity-line"></div></div><div class="activity-card"><i class="fa-solid fa-microchip"></i><h3>Technology Project</h3><p>Pengembangan proyek teknologi dan inovasi mahasiswa.</p><div class="activity-line"></div></div><div class="activity-card"><i class="fa-solid fa-people-group"></i><h3>Gathering</h3><p>Kegiatan untuk mempererat hubungan dan solidaritas mahasiswa.</p><div class="activity-line"></div></div></div></section>
+<section id="arsip" class="page"><div class="section-title"><div class="section-label">ORGANIZATIONAL ARCHIVE</div><h2>Arsip <span>Kepengurusan</span></h2><p>Jejak perjalanan HIMATEKLI PILM dari Angkatan 1 hingga Angkatan 9.</p></div><p class="archive-intro">Sebuah ruang untuk menyimpan sejarah, kepengurusan, program kerja, dan LPJ setiap generasi. Arahkan kursor untuk melihat efek kartu, lalu klik angkatan untuk membuka detail arsipnya.</p><div class="archive-timeline"><div class="archive-card" style="--archive:#00eaff" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 01</div><h3>Angkatan 1</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 1.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#9b4dff" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 02</div><h3>Angkatan 2</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 2.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#ff3b30" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 03</div><h3>Angkatan 3</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 3.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#ffd400" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 04</div><h3>Angkatan 4</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 4.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#00d68f" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 05</div><h3>Angkatan 5</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 5.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#00a8ff" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 06</div><h3>Angkatan 6</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 6.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#ff3cac" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 07</div><h3>Angkatan 7</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 7.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#ff8c00" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 08</div><h3>Angkatan 8</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 8.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div><div class="archive-card" style="--archive:#7c3cff" onclick="toggleArchive(this)"><div class="archive-year">HIMATEKLI PILM • ARSIP 09</div><h3>Angkatan 9</h3><p>Dokumentasi kepengurusan, program kerja, dan laporan pertanggungjawaban Angkatan 9.</p><span class="archive-status"><i class="fa-solid fa-circle"></i> Arsip Pengurus</span><div class="archive-details"><a href="#" onclick="event.stopPropagation();return false"><i class="fa-solid fa-file-lines"></i> Buka LPJ</a></div></div></div></section>
+<section id="contact" class="page"><div class="section-title"><div class="section-label">GET IN TOUCH</div><h2>Contact <span>HIMATEKLI</span></h2><p>Hubungi dan ikuti HIMATEKLI melalui platform berikut.</p></div><div class="contact-grid"><div class="contact-card"><i class="fa-solid fa-envelope"></i><h3>Email</h3><p>himatekli@example.com</p></div><div class="contact-card"><i class="fa-brands fa-whatsapp"></i><h3>WhatsApp</h3><p>Hubungi kami melalui WhatsApp.</p><a href="#">Chat WhatsApp →</a></div><div class="contact-card"><i class="fa-solid fa-location-dot"></i><h3>Sekretariat</h3><p>Fakultas / Kampus Teknik Listrik & Instalasi.</p></div></div><div class="social-section"><h2>Follow HIMATEKLI</h2><div class="social-buttons"><a class="social-button" href="#"><i class="fa-brands fa-instagram"></i></a><a class="social-button" href="#"><i class="fa-brands fa-whatsapp"></i></a><a class="social-button" href="#"><i class="fa-brands fa-youtube"></i></a></div></div></section>
+</main><footer><div>© 2026 <strong>HIMATEKLI PILM</strong> — Himpunan Teknik Listrik & Instalasi</div><div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></footer>
+<div class="modal" id="aboutModal" onclick="closeAbout(event)"><div class="modal-box"><button class="modal-close" onclick="closeAbout()"><i class="fa-solid fa-xmark"></i></button><h2 id="modalTitle"></h2><p id="modalText"></p></div></div>
+<script>
+let currentSemester='all';
+function showPage(name){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active-page'));document.getElementById(name).classList.add('active-page');document.body.classList.remove('home','about','materi','kegiatan','arsip','contact');document.body.classList.add(name);document.querySelectorAll('.nav-pill').forEach(x=>x.classList.toggle('active',x.dataset.page===name));document.getElementById('navMenu').classList.remove('show');document.getElementById('mobileOverlay').classList.remove('show');document.body.classList.remove('menu-open');scrollTo({top:0,behavior:'smooth'})}
+function toggleArchive(card){card.classList.toggle('clicked')}
+function toggleMenu(){const menu=document.getElementById('navMenu');const overlay=document.getElementById('mobileOverlay');const open=!menu.classList.contains('show');menu.classList.toggle('show',open);overlay.classList.toggle('show',open);document.body.classList.toggle('menu-open',open)}
+function filterSemester(s,b){currentSemester=s;document.querySelectorAll('.semester').forEach(x=>x.classList.remove('active'));b.classList.add('active');filterMaterials()}
+function filterMaterials(){let q=document.getElementById('searchInput').value.toLowerCase().trim();document.querySelectorAll('.material-card').forEach(c=>{c.style.display=(currentSemester==='all'||c.dataset.semester===currentSemester)&&c.innerText.toLowerCase().includes(q)?'block':'none'})}
+function openAbout(title,text){document.getElementById('modalTitle').textContent=title;document.getElementById('modalText').textContent=text;document.getElementById('aboutModal').classList.add('show')}
+function closeAbout(e){if(!e||e.target.id==='aboutModal')document.getElementById('aboutModal').classList.remove('show')}
+function updateTheme(){let l=document.body.classList.contains('light-mode');document.querySelector('#themeToggle i').className=l?'fa-solid fa-sun':'fa-solid fa-moon'}
+function toggleTheme(){document.body.classList.toggle('light-mode');localStorage.setItem('himatekli-theme',document.body.classList.contains('light-mode')?'light':'dark');updateTheme()}
+if(localStorage.getItem('himatekli-theme')==='light')document.body.classList.add('light-mode');updateTheme();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('navMenu').classList.remove('show');document.getElementById('mobileOverlay').classList.remove('show');document.body.classList.remove('menu-open');document.getElementById('aboutModal').classList.remove('show')}});
+</script>
+<script id="himatekli-logo-only-loading-js">
+(function(){
+  document.body.classList.add('loading-active');
+  const loader = document.getElementById('loadingScreen');
+  function finishLoading(){
+    if(!loader) return;
+    loader.classList.add('hide');
+    document.body.classList.remove('loading-active');
+    setTimeout(function(){ loader.remove(); }, 500);
+  }
+  if(document.readyState === 'complete') {
+    setTimeout(finishLoading, 1200);
+  } else {
+    window.addEventListener('load', function(){ setTimeout(finishLoading, 1200); }, {once:true});
+  }
+})();
+</script>
+
+</body></html>
